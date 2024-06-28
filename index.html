@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>某某女神的开心盒</title>
+    <link rel="stylesheet" href="./reset.css">
+    <style>
+        body {
+            max-width: 750px;
+            width: 10rem;
+            margin: 0 auto;
+            overflow-y: hidden;
+        }
+        @media screen and (min-width:750px){
+            html {
+                font-size: 75px !important;
+            }
+        }
+        .fengmian {
+            width: 100%;
+            height: 50rem;
+            background-color: pink;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 999;
+        }
+        .juzhong {
+            width: 10rem;
+            margin-top: 5rem;
+        }
+        .anyu {
+            height: 1rem;
+            line-height: 1rem;
+            width: 10rem;
+            font-size: .6rem;
+            text-align: center;
+        }
+        .dier {
+            height: 1.2rem;
+            line-height: 1.2rem;
+            width: 10rem;
+            text-align: center;
+        }
+        .disan {
+            height: 1.2rem;
+            line-height: 1.2rem;
+            width: 10rem;
+            text-align: center;
+        }
+        .out {
+            width: 10rem;
+            height: 17.773333rem;
+            background-image: url(./背景.jpg);
+            background-size: contain;
+            position: relative;
+            overflow: hidden;
+        }
+        .ziti {
+            position: absolute;
+            left: 1.5rem;
+            top: 1rem;
+            color: purple;
+            font-size: 0.8rem;
+            font-weight: bold;
+            opacity: .7;
+            text-shadow: 0 0 10px rgba(0, 0,0, 1);
+            animation-name: zitibianse;
+            animation-duration: 10s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        @keyframes zitibianse {
+            10%{
+                text-shadow: 0 0 10px rgb(243, 169, 169);
+            }
+            20%{
+                text-shadow: 0 0 10px rgb(255, 0, 255);
+            }
+            30%{
+                text-shadow: 0 0 10px blue;
+            }
+            40%{
+                text-shadow: 0 0 10px chartreuse;
+            }
+            50%{
+                text-shadow: 0 0 10px darkgray;
+            }
+            60%{
+                text-shadow: 0 0 10px darkred;
+            }
+            70%{
+                text-shadow: 0 0 10px deepskyblue;
+            }
+            80%{
+                text-shadow: 0 0 10px red;
+            }
+            90%{
+                text-shadow: 0 0 10px yellow;
+            }
+            100%{
+                text-shadow: 0 0 10px black;
+            }
+        }
+        .zuo {
+            width: 5.3333rem;
+            height: 2.1733rem;
+            border-radius: 10px;
+            background-image: url(./开心盒.jpg);
+            background-size: contain;
+            opacity: .6;
+            position: fixed;
+            bottom: 1.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 0 5px rgba(0, 0,0, .6);
+        }
+        .xiaohua {
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 10rem;
+            height: 17.773333rem;
+            background-color: white;
+            background-size: contain;
+        }
+        .xiaohua li {
+            position: absolute;
+            left: 0;
+            top: 0;
+            padding: 1rem 1rem 0 1rem;
+            font-size: 0.8rem;
+            display: none;
+        }
+        .xiaohua li:first-child {
+            display: block;
+        }
+        .xiaohua .huanyige {
+            width: 1rem;
+            height: 4.666667rem;
+            background-image: url(./换一个.png);
+            background-size: contain;
+            border-radius: 10px;
+            opacity: .5;
+            position: fixed;
+            top: 5rem;
+            left: 50%;
+            transform: translate(-4.5rem);
+            box-shadow: 0 0 5px rgba(0, 0,0, .6);
+        }
+        .guanbixiaohua {
+            width: 1rem;
+            height: 4.666667rem;
+            background-image: url(./关闭.png);
+            background-size: contain;
+            border-radius: 10px;
+            opacity: .5;
+            position: fixed;
+            top: 5rem;
+            left: 50%;
+            transform: translate(3.5rem);
+            box-shadow: 0 0 5px rgba(0, 0,0, .6);
+        }
+    </style>
+    <script src="./index.js"></script>
+</head>
+<body>
+    <div class="fengmian">
+        <div class="juzhong">
+            <div class="anyu" style="font-weight: bold;">
+                请输入某某女神开心盒的暗语
+            </div>
+            <div class="dier"><input type="text" style="border: none;height: .7rem;padding-left: .2rem;font-size: .5rem;"></div>
+            <div class="disan"><button style="height: .9rem;font-size: .5rem;font-weight: bold;">验证暗语</button></div>
+        </div>
+    </div>
+    <div class="out">
+        <div class="ziti">只为博某某女神一笑</div>
+        <div class="zuo"></div>
+        <ul class="xiaohua" style="overflow-y: scroll;">
+            <li>
+                一辆面包车塞了14个人。后面一乘客说：你这是超载，被逮着要扣不少分呢!
+                司机回头淡定冷笑：扣分，那得有驾照!
+                顿时，无数倒吸凉气的声音弥漫在车厢……又一乘客问：没有驾照你也敢开啊?
+                司机说：没事，酒壮人胆，中午喝了一斤二锅头，老子怕啥!
+                全车人鸦雀无声!
+                一位乘客说：我要下车!
+                司机：下什么车!刹车早坏了!抓稳，下坡了。
+            </li>
+            <li>
+                老板说：谁要敢跳进鳄鱼池并活着上岸，奖励一百万，死了给五百万。大家都没人敢跳。
+　　            忽然“扑通”一声，一人跳入池中。只见他被鳄鱼追赶，游得飞快，以超越常人的速度，迅速游上了对岸，接过100万后，他怒火冲天：是谁把老子推下去的?
+            </li>
+            <li>
+                一辆拖拉机在路上坏了，恰好一辆奔驰经过，拖拉机师傅就让奔驰拖它走，奔驰司机喝了点酒，就答应了。他们说好是打右转向灯继续开，左转向灯就停。
+                开着开着从后面来一宝马，一下子就超过了奔驰，开奔驰的一看，竟被宝马超车了，再加上酒劲一发作，奔驰立马加大油门，发疯似地追赶宝马。奔驰跑得飞快，拖拉机受不了，所以拖拉机就死命打左转向灯。
+                路过交警看到了，立马向总部汇报：高速路上一辆宝马和奔驰在飙车，更疯狂的是，后面还有一辆一直打左转向灯想超车的拖拉机！
+            </li>
+            <li>
+                教堂的神父临时有事要离开小镇，他找来他的好朋友――杂货铺老板顶替自己。可是老板说他完全不知道该怎么做。于是神父决定在离开之前，花半个小时向他的朋友演示操作过程。
+                首先来忏悔的是一个妇女。她说：“神父，我犯了罪。我对丈夫不忠。”
+                “有几次？”神父问道。
+                “三次。”
+                神父指示她念圣经中的某一段，往捐献箱里投５块钱。那个妇女照着他的指示做了，然后就离开了教堂。
+                杂货铺老板看了之后，表示他学会了，随后神父就放心地离开了教堂。
+                代替神父（杂货铺老板）面对的第一个忏悔者也是一位不忠的妇女。妇女说：“神父，我犯了罪。我对丈夫不忠。”
+                老板学着神父的口气说：“有几次？”
+                “就一次。”
+                老板有点为难，他想了想说：“回去再试两次，我们今天有特价，５块钱３次。”
+            </li>
+            <li>
+                有3位朋友住在宾馆的第65层。突然全楼停电了，于是便一起爬楼。为了消除疲劳，其中一个人不断地讲笑话，好不易到第60层，大家早已经疲务不堪了，于是决定坐下休息一下，一直讲话的人对另外两个朋友说:“换你们来讲一个笑话吧“
+                其中一个朋友一边翻着口袋,一边说：“房间钥匙好像落在前台柜台上了！”
+            </li>
+            <li>
+                毕业后七年，总算接了个大工程，造一根三十米烟囱，工期两个月，造价三十万，垫资。总算在工期快结束时搞完了。今天人家来验收，我才发现，图纸看反了，人家是要挖一口井！
+            </li>
+            <li>
+                睡觉前，警告女友，我睡眠质量不好，稍微有动静就容易醒，让她睡觉时候注意点。今天早上一起床，我猛然发现我身上被写满了字：“你看你根本就没醒！”“这样也没醒！”“骗谁啊！”……
+            </li>
+            <li>
+                某甲附庸风雅，好弄琵琶，但弹得很差经。有一天他与朋友在古湖泛舟，又弹起琵琶来。一曲未终，邻船有个老妇人哭泣不已。某甲得意地对朋友说：“看我的琵琶弹得多好，还没弹完一曲就让人感动得流下泪。”那老妇人闻声道，“是啊，刚才听到琴声，便想起了我死去的丈夫，不由得流下泪来。”某甲越发越得意地问道：“你丈夫生前是干什么的？”
+                老妇回：“弹棉花。”
+            </li>
+            <li>
+                一日，老鳖调戏河蚌，不慎被夹，痛得老鳖拖着河蚌来回爬。这时，青蛙看到了，忙惊叹道：“乖乖！鳖哥混大了，进出都带公文包！”
+            </li>
+            <div class="huanyige"></div>
+            <div class="guanbixiaohua"></div>
+        </ul>
+    </div>
+    <script>
+        var fengmian = document.querySelector('.fengmian')
+        var input = document.querySelector('[type=text]')
+        var button = document.querySelector('button')
+        var mima = '某某女神最美';
+        var zuo = document.querySelector('.zuo');
+        var you = document.querySelector('.you');
+        var xiaohua = document.querySelector('.xiaohua');
+        var xiaohuahuanyige = document.querySelector('.xiaohua .huanyige');
+        var xiaolis = document.querySelectorAll('.xiaohua li');
+        var guanbixiaohua = document.querySelector('.guanbixiaohua');
+        button.addEventListener('click',function() {
+            if(input.value === '') {
+                alert('我尊贵的某某女神，别忘了我们的暗语哦！')
+            } else if (input.value !== mima) {
+                alert('哼，暗语不对，你才不是我的某某女神！')
+            } else if (input.value === mima) {
+                fengmian.style.display = 'none';
+                alert('欢迎来到某某女神的专属空间')
+            }
+        });
+        zuo.addEventListener('click',function() {
+            xiaohua.style.display = 'block';
+            this.style.display = 'none';
+        });
+        function suijishu(max,min) {
+            return Math.floor(Math.random()*(max-min+1))+min;
+        };
+        xiaohuahuanyige.addEventListener('click',function() {
+            for(var i=0;i<xiaolis.length;i++) {
+                xiaolis[i].style.display = 'none';
+            }
+            xiaolis[suijishu(xiaolis.length-1,0)].style.display = 'block';
+        });
+        guanbixiaohua.addEventListener('click',function() {
+            xiaohua.style.display = 'none';
+            zuo.style.display = 'block';
+        })
+    </script>
+</body>
+</html>
